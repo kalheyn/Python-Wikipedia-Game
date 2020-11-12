@@ -6,6 +6,7 @@
 * Starting word :triangular_flag_on_post:
 * Ending word :checkered_flag:
 * Current word :round_pushpin:
+* Navigation options :bookmark_tabs:
 * Click counter :point_up:
 * Stop-watch :watch:
 * Session leaderboard (three-letter name, number of clicks, finish time) :chart_with_upwards_trend:
