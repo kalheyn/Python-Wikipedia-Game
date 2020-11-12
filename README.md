@@ -10,6 +10,7 @@
 * Click counter :point_up:
 * Stop-watch :watch:
 * Session leaderboard :chart_with_upwards_trend:
-  * Initials
+  * Player initials
+  * Start & end words
   * Click count
   * Finish time
