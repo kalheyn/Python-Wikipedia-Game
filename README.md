@@ -10,6 +10,6 @@
 * Click counter :point_up:
 * Stop-watch :watch:
 * Session leaderboard :chart_with_upwards_trend:
-  * Three-letter name
+  * Initials
   * Click count
   * Finish time
