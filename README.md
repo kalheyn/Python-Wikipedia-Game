@@ -4,7 +4,9 @@
 ## Features
 * Command-line interface :computer:
 * Starting word :triangular_flag_on_post:
+  * Random or user-input
 * Ending word :checkered_flag:
+  * Random or user-input
 * Current word :round_pushpin:
 * Navigation options :page_facing_up:
 * Click counter :point_up:
