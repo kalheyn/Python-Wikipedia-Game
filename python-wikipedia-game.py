@@ -4,9 +4,9 @@ import random
 
 # game initialization 
 def startGame():
-    print("\n")
+    print(chr(27) + "[2J")
     print("\n~ WELCOME TO THE PYTHON WIKIPEDIA GAME ~\n")
-    print("Objective: Navigate from the starting Wikipedia page to the target subject using only the links on each page. Fewer clicks and faster time will score the highest. Press ctrl+C to quit at any time.\n")
+    print("Objective: Navigate from the starting Wikipedia page to the target subject using only the links on each page. Fewest clicks and faster time will score the highest. Press ctrl+C to quit at any time.\n")
 
 # recursive try/catch for if there are multiple results for a subject. E.g. "United Theological College".
 def checkDisambiguation(subject):

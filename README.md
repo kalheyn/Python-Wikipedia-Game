@@ -2,7 +2,7 @@
 "The Wiki Game, also known as the Wikipedia race, is a hypertextual game designed to work specifically with Wikipedia. It requires only a computer, Internet access, a web browser and (optionally) a time-keeping device to play." (Source: https://en.wikipedia.org/wiki/Wikipedia:Wiki_Game)
 
 ## Gameplay 
-A single player starts on a randomly selected article subject. The objective is to navigate to a target article solely by clicking links within each article. The player scores higher for using fewer clicks and less time. 
+A single player starts on a randomly selected or chosen article subject. The objective is to navigate to a target article solely by clicking links within each article. The player scores higher for using fewer clicks and less time. 
 
 ## Features
 * Command-line interface :computer:
