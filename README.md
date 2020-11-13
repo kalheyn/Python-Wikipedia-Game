@@ -6,10 +6,8 @@ A single player starts on a randomly selected article subject. The objective is 
 
 ## Features
 * Command-line interface :computer:
-* Starting word :triangular_flag_on_post:
-  * Random or user-input
-* Target word :checkered_flag:
-  * Random or user-input
+* Random starting subject :triangular_flag_on_post:
+* Random target subject :checkered_flag:
 * Current word :round_pushpin:
 * Navigation options :page_facing_up:
 * Click counter :point_up:
