@@ -1,11 +1,12 @@
 import wikipedia
 import random
 
-try: 
-    summary = wikipedia.summary("United Theological College", sentences=1)
-except wikipedia.exceptions.DisambiguationError as e:
-    num_options = len(e.options)
-    option = random.randrange(num_options)
-    summary = wikipedia.summary(e.options[option], sentences=1)
+def checkDisambiguation(subject):
+    try: 
+        summary = wikipedia.summary(subject, sentences=1)
+    except wikipedia.exceptions.DisambiguationError as e:
+        option = random.choice(e.options)
+        summary = checkDisambiguation(option)
+    return summary
 
-print(summary)
+print(checkDisambiguation('geore bush'))

@@ -8,26 +8,37 @@ def startGame():
     print("\n~ WELCOME TO THE PYTHON WIKIPEDIA GAME ~\n")
     print("Objective: Navigate from the starting Wikipedia page to the target subject using only the links on each page. Fewer clicks and faster time will score the highest. Press ctrl+C to quit at any time.\n")
 
-# get random Wikipedia subject & summary
-def getSubject(): 
-    subject = wikipedia.random()
-    # try/catch for if there are multiple results for a subject. E.g. "United Theological College".
+# recursive try/catch for if there are multiple results for a subject. E.g. "United Theological College".
+def checkDisambiguation(subject):
     try: 
         summary = wikipedia.summary(subject, sentences=1)
     except wikipedia.exceptions.DisambiguationError as e:
-        num_options = len(e.options)
-        option = random.randrange(num_options)
-        summary = wikipedia.summary(e.options[option], sentences=1)
+        option = random.choice(e.options)
+        summary = checkDisambiguation(option)
+    return summary
+
+# get random Wikipedia subject & summary
+def getSubject(choice=""): 
+    subject = ''
+    if len(choice) == 0:
+        subject = wikipedia.random()
+    else: 
+        subject = wikipedia.search(choice, results=1, suggestion=True)[0][0]
+    summary = checkDisambiguation(subject)
     chunk = {'subject': subject, 'summary': summary}
     return chunk
 
 # get random starting and ending words
 def setSubjects():
-    start_subject = getSubject()
-    target_subject = getSubject()
-    print("* Starting Subject: %s - %s" % (start_subject["subject"], start_subject["summary"]))
-    print("* Target Subject: %s - %s" % (target_subject["subject"], target_subject["summary"]))
-    subjects = {"start": start_subject['subject'], "target": target_subject['subject']}
+    start_choice = input("(Starting Subject) Press ENTER for a random subject or type your choice here: ")
+    target_choice = input("(Target Subject) Press ENTER for a random subject or type your choice here: ")
+    print("")
+    start_subject = getSubject(start_choice)
+    print("(Start) %s: %s" % (start_subject["subject"].upper(), start_subject["summary"]))
+    target_subject = getSubject(target_choice)
+    print("(Target) %s: %s" % (target_subject["subject"].upper(), target_subject["summary"]))
+    subjects = {"start": start_subject, "target": target_subject}
+    print("")
     return subjects
 
 # Play game
