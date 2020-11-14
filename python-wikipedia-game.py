@@ -40,7 +40,7 @@ def setSubjects():
     target_subject = getSubject(target_choice)
     print("(Target) %s: %s" % (target_subject["subject"].upper(), target_subject["summary"]))
     subjects = {"start": start_subject, "target": target_subject, 'current': start_subject}
-    print("\nThe clock starts when you select your first link. Go!")
+    input("\nThe clock starts when you select your first link. Press ENTER to start!")
     return subjects
 
 def printHeader(player_data):
