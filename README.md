@@ -9,7 +9,7 @@
   * `pip isntall random`
 3. Navigate to the file location. 
 4. Run the program using `python python-wikipedia-game.py`. 
-
+5. Enjoy!
 
 ## Gameplay 
 A single player starts on a randomly selected or chosen article subject. The objective is to navigate to a target article solely by clicking links within each article. The player scores higher for using fewer clicks and less time. 
