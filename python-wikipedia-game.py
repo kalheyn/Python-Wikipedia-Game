@@ -17,6 +17,8 @@ def checkDisambiguation(subject):
     except wikipedia.exceptions.DisambiguationError as e:
         option = random.choice(e.options)
         summary = checkDisambiguation(option)
+    except wikipedia.exceptions.PageError as e: 
+        summary = "No Wikipedia page matched the keyword."
     return summary
 
 # get random Wikipedia subject & summary
@@ -60,7 +62,8 @@ def printHeader(player_data):
     divider = '=' * divider_length
     print("")
     print(divider)
-    print("%s clicks | %s seconds\n" % (player_data['clicks'], player_data['time']))
+    # print("%s clicks | %s seconds\n" % (player_data['clicks'], player_data['time']))
+    print("%s clicks\n" % player_data['clicks'])
     print("Start: %s" % player_data['start']['subject'].upper())
     print("Target: %s" % player_data['target']['subject'].upper())
     print("Current: %s - %s\n" % (player_data['current']['subject'].upper(), player_data['current']['summary']))
@@ -123,4 +126,5 @@ subjects = setSubjects()
 player_data = initializePlayer(subjects)
 while not player_data['current'] == player_data['target']:
     play(player_data)
-print("\nDone.")
+printHeader(player_data)
+print("Congratulations! You won the Wikipedia Game!")
