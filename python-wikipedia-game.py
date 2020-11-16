@@ -29,7 +29,7 @@ def getSubject(choice=""):
     else: 
         try: 
             subject = wikipedia.search(choice, results=1, suggestion=True)[0][0]
-        except IndexError as e: 
+        except IndexError: 
             print("No results were found. Selecting a random keyword...")
             subject = wikipedia.random()
     summary = checkDisambiguation(subject)
@@ -42,10 +42,11 @@ def setSubjects():
     target_choice = input("(Target Subject) Press ENTER for a random subject or type your choice here. (Tip: All roads lead to Philosophy.): ")
     print("")
     start_subject = getSubject(start_choice)
+    current_subject = getSubject(start_choice)
     print("(Start) %s: %s" % (start_subject["subject"].upper(), start_subject["summary"]))
     target_subject = getSubject(target_choice)
     print("(Target) %s: %s" % (target_subject["subject"].upper(), target_subject["summary"]))
-    subjects = {"start": start_subject, "target": target_subject, 'current': start_subject}
+    subjects = {"start": start_subject, "target": target_subject, 'current': current_subject}
     input("\nThe clock starts now. Press ENTER to begin!")
     return subjects
 
