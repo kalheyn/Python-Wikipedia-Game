@@ -25,7 +25,11 @@ def getSubject(choice=""):
     if len(choice) == 0:
         subject = wikipedia.random()
     else: 
-        subject = wikipedia.search(choice, results=1, suggestion=True)[0][0]
+        try: 
+            subject = wikipedia.search(choice, results=1, suggestion=True)[0][0]
+        except IndexError as e: 
+            print("No results were found. Selecting a random keyword...")
+            subject = wikipedia.random()
     summary = checkDisambiguation(subject)
     chunk = {'subject': subject, 'summary': summary}
     return chunk
