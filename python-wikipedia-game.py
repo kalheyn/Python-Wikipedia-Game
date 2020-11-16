@@ -128,7 +128,7 @@ while not player_data['current'] == player_data['target']:
     play(player_data)
 printHeader(player_data)
 print("Congratulations! You won the Wikipedia Game!")
-image = """                                                        ,jf
+grand_finale = """                                                        ,jf
    _am,    ,_am,  ,_g_oam,    _am,   _g_ag,   _am,   koewkovg   _mm_
  ,gF  @._-gF   @-"  jf   @  ,gF  @  ^ NX  #_,gF  @     jf      qK  "
  8Y      8Y    d   j#   jF .8Y  ,d   dY     8Y   d    jf       *b,
@@ -137,3 +137,4 @@ jK   ,  jK   ,N   jN   jF  :K  ,Z  ,jF     jK  ,Z"  ,jfk,       dN.
                          ,gF',@'
                         :8K  j8
                          "*w*""""
+print(grand_finale)
