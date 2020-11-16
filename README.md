@@ -4,6 +4,8 @@
 ## Gameplay 
 A single player starts on a randomly selected or chosen article subject. The objective is to navigate to a target article solely by clicking links within each article. The player scores higher for using fewer clicks and less time. 
 
+![Python Wikipedia Game walkthrough](./Screenshots/ezgif.com-gif-maker.gif)
+
 ## Current Features
 * Command-line interface :computer:
 * Random or chosen starting subject :triangular_flag_on_post:
