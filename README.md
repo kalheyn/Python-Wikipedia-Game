@@ -4,13 +4,15 @@
 ## Gameplay 
 A single player starts on a randomly selected or chosen article subject. The objective is to navigate to a target article solely by clicking links within each article. The player scores higher for using fewer clicks and less time. 
 
-## Features
+## Current Features
 * Command-line interface :computer:
-* Random starting subject :triangular_flag_on_post:
-* Random target subject :checkered_flag:
+* Random or chosen starting subject :triangular_flag_on_post:
+* Random or chosen target subject :checkered_flag:
 * Current word :round_pushpin:
-* Navigation options :page_facing_up:
+* List of link navigation :page_facing_up:
 * Click counter :point_up:
+
+## Future Features
 * Stop-watch :watch:
 * Session leaderboard :chart_with_upwards_trend:
   * Player initials

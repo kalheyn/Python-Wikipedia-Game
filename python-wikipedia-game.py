@@ -119,4 +119,4 @@ subjects = setSubjects()
 player_data = initializePlayer(subjects)
 while not player_data['current'] == player_data['target']:
     play(player_data)
-print("Done.")
+print("\nDone.")
